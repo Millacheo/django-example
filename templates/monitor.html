@@ -11,6 +11,7 @@
         <th>Precio</th>
         <th>Resolución</th>
         <th>Imagen</th>
+        <th>Seleccionar</th>
     </tr>
     </thead>
     <tbody >
@@ -21,10 +22,12 @@
         <td>{{ item.precioUnitario }}</td>
         <td>{{ item.resolucion }}</td>
         <td><img src="{{ item.image_url }}"   width="50" height="50" alt=""></td>
+        <td><input type="checkbox" name="selected_items" value="{{ item.rut }}"></td>
     </tr>
     {% endfor %}
     </tbody>
 </table>
-
+<button type="submit">Delete Selected</button>
+</form>
 
 {% endblock content %}

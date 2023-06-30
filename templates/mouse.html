@@ -10,7 +10,8 @@
         <th>Marca</th>
         <th>Precio</th>
         <th>Wireless</th>
-
+        <th>Seleccionar</th>
+        <th>Imagen</th>
     </tr>
     </thead>
     <tbody >
@@ -20,9 +21,12 @@
         <td>{{ item.marca }}</td>
         <td>{{ item.precioUnitario }}</td>
         <td>{{ item.wireless }}</td>
+        <td><input type="checkbox" name="selected_items" value="{{ item.rut }}"></td>
+    </tr>
     </tr>
     {% endfor %}
     </tbody>
 </table>
-
+<button type="submit">Delete Selected</button>
+</form>
 {% endblock content %}

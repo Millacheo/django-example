@@ -50,7 +50,7 @@ class Cliente(models.Model):
     compraComputador = models.ManyToManyField(Computador, blank=True)
     compraMonitor = models.ManyToManyField(Monitor, blank=True)
     selected = models.BooleanField(default=False)
-
+    imagen_producto = models.ImageField(null=True, blank=True, upload_to="images/")
     objects = models.Manager()
 
     def __str__(self):
